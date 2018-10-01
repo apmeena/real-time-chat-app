@@ -19,7 +19,7 @@ export class SignupComponent implements OnInit, OnDestroy {
   private subscriptions: Subscription[] = [];
 
   constructor(
-    private fb: FormBuilder, 
+    private fb: FormBuilder,
     private alertService: AlertService,
     private auth: AuthService,
     private loadingService: LoadingService,

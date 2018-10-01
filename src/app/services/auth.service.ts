@@ -30,7 +30,7 @@ export class AuthService {
         } else {
           return Observable.of(null);
         }
-      })
+      });
 
     this.setCurrentUserSnapshot();
   }
@@ -45,10 +45,11 @@ export class AuthService {
             email: user.email,
             firstName,
             lastName,
-            photoUrl: 'https://firebasestorage.googleapis.com/v0/b/chat-4f314.appspot.com/o/default_profile_pic.jpg?alt=media&token=15171a5a-45fa-4e7e-9a4a-522bb330f2ba',
+            // tslint:disable-next-line:max-line-length
+            photoUrl: 'https://firebasestorage.googleapis.com/v0/b/arpit-real-time-chat-app.appspot.com/o/default_profile_pic.jpg?alt=media&token=334ccb7c-b8bb-4009-aa12-0c309ebde157',
             quote: 'Life is like a box of chocolates, you never know what you are gonna get!',
             bio: 'Bio is under construction...'
-          }
+          };
 
           userRef.set(updatedUser);
           return true;

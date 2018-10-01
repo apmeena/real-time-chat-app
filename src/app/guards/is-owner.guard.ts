@@ -15,12 +15,12 @@ export class IsOwnerGuard implements CanActivate {
     private auth: AuthService,
     private router: Router,
     private alertService: AlertService
-  ){}
+  ) {}
 
   canActivate(
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
-    
+
       return this.auth.currentUser.pipe(
         take(1),
         map((currentUser) => !!currentUser && currentUser.id === next.params.userId),

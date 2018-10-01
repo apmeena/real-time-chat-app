@@ -8,7 +8,7 @@ import { ChatroomService } from './../../../../services/chatroom.service';
 })
 export class ChatInputComponent implements OnInit {
 
-  public newMessageText: string = '';
+  public newMessageText: String = '';
 
   constructor(
     private chatroomService: ChatroomService
