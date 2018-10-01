@@ -4,11 +4,9 @@ import { User } from '../interfaces/user';
 import { Alert } from './../classes/alert';
 import { AlertService } from './alert.service';
 import { Observable } from 'rxjs/Observable';
-import { AlertType } from './../enums/alert-type.enum';
 import { AngularFireAuth } from 'angularfire2/auth';
 import { AngularFirestore, AngularFirestoreDocument } from 'angularfire2/firestore';
 import 'rxjs/add/observable/of';
-
 
 @Injectable()
 export class AuthService {
